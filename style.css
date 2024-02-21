@@ -1,0 +1,74 @@
+.header{
+    background-color: #101010;
+    vertical-align: middle;
+    background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+
+.inner-header{
+    overflow: hidden;
+    padding-left: 60px;
+    padding-right: 30px;
+}
+
+.content{
+    vertical-align: middle;
+    align-content: center;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.content-img{
+    float: left;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content-text{
+    overflow: hidden;
+    text-align: justify;
+}
+
+.content-img img{
+    height: auto;
+    width: 100%;
+}
+
+.logo-container h1{
+    vertical-align: middle;
+    font-size: 28px;
+    color: white;
+    float: left;
+}
+
+.navigation{
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    background-color: #101010;
+}
+
+.navigation a li{
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 20px;
+    color: white;
+}
+
+.navigation a:hover{
+    background-color: gray;
+    color: #101010;
+}
+
+div {
+    width: auto;
+}
+
