@@ -1,75 +1,183 @@
-.header{
+.wrapper-container{
     background-color: #101010;
-    vertical-align: middle;
     background-image: url("https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-    height: 300px;
+    background-size: 100% 100%;
+  
+    padding: 20px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-.inner-header{
-    overflow: hidden;
-    padding-left: 60px;
-    padding-right: 30px;
+.logo{
+    max-width: 100px;
+    padding: 20px;
+    margin: auto;
 }
 
-.content{
-    vertical-align: middle;
-    align-content: center;
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+.wrapper-header{
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+}
+
+ul{
+    padding: unset;
     text-align: center;
-    padding-left: 150px;
-    padding-right: 150px;
 }
 
-.content-img{
-    float: left;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-}
-
-.content-text{
-    overflow: hidden;
-    text-align: justify;
-}
-
-.content-img img{
-    height: auto;
-    width: 100%;
-}
-
-.logo-container h1{
-    vertical-align: middle;
-    font-size: 28px;
-    color: white;
-    float: left;
-}
-
-.navigation{
-    vertical-align: middle;
-    text-align: center;
-    float: right;
-}
-
-.navigation a{
-    height: 100%;
-    display: table;
-    float: left;
-    padding: 0px 20px;
-    background-color: #101010;
-}
-
-.navigation a li{
-    vertical-align: middle;
-    display: table-cell;
-    font-size: 20px;
+a{
     color: white;
 }
 
-.navigation a:hover{
-    background-color: gray;
-    color: #101010;
+li{
+    display: inline-block;
 }
 
-div {
+.grid-wrapper {
+    display: inline-block;
     width: auto;
+    padding: 20px;
 }
 
+.about-my {
+    width: 60%;
+    float: left;
+    padding: 20px;
+}
+
+.pasport {
+    width: 29%;
+    float: left;
+    padding: 20px;
+}
+
+.skills-my {
+    width: 30%;
+    float: left;
+    padding: 20px;
+}
+
+.history-my {
+    width: 59%;
+    float: left;
+    padding: 20px;
+}
+
+.logo-my {
+    background-image: url("https://i.postimg.cc/wMTjW87v/IMG-2975.jpg");
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.grid-item {
+    border-style: groove;
+}
+
+@media screen and (max-width: 907px) {
+    .grid-item {
+        width: 89%;
+        display: grid;
+    }
+    
+    .about-my {
+        padding-bottom: 40px;
+    }
+}
+
+.collapsible {
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #000;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .container-skill {
+    width: auto;
+    background-color: #ddd;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  
+  .html {width: 60%; background-color: #555;}
+  .css {width: 40%; background-color: #555;}
+  .js {width: 65%; background-color: #555;}
+  .python {width: 80%; background-color: #555;}
+  .jquery {width: 5%; background-color: #555;}
+
+  /* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 31px;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .containerline {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  
+  /* The circles on the timeline */
+  .containerline::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    left: 15px;
+    background-color: white;
+    border: 4px solid #555;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* The actual content */
+  .history-content {
+    padding-left: 70px;
+    padding-right: 25px;
+    }

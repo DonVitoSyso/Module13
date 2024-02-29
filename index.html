@@ -3,69 +3,143 @@
 <header>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>About my</title>
-    <header>
-        <div class="wrapper header">
+    <title>Full stack developer.</title>
+
+    <header class="wrapper-container">
+        <div class="wrapper-header">
             <div class="logo container">
-                
+                <svg width="90" height="50">
+                    <polyline points="30,0 15,50 0,10 30,0 45,50 54,20 63,50 79,0 90,33" stroke="white" fill="none" stroke-width="3"/>
+                    <line x1="54" y1="20" x2="60" y2="0" stroke="white" stroke-width="3"/>
+                </svg>
             </div>
             <h1>Don Vito Syso</h1>
 
             <nav>
                 <ul>
-                    <a href="#"><li>Main</li></a>
-                    <a href="about.html"><li>About my</li></a>
-                    <a href="contacts.html"><li>Contacts</li></a>
+                    <a href="#"><li>Main | </li></a>
+                    <a href="#"><li>About my | </li></a>
+                    <a href="#"><li>Contacts | </li></a>
                 </ul>
             </nav>
         </div>
     </header>
-    <div>
-        <div class="content">
-            <h1>Python program</h1>
-            <div class="content-img">
-                <img src="https://lms-cdn.skillfactory.ru/assets/courseware/v1/5726f286632afde30a61671f579bb675/asset-v1:SkillFactory+FPW-2.0+27AUG2020+type@asset+block/undraw_static_website_0107.svg">
+
+    <div class="grid-wrapper container content-my">
+        <div class="about-my grid-item">
+            <h2>About my</h2>
+            <hr>
+            <p>Обо мне.</p>
+            <p>Я начинающий "старый" разработчик-программист. Моя страсть это писать скрипты для Excel. Ищу свое место в мире Web-разработчиков. Больше по душе работа с БД, т.е. backend разработка. Но так же нацелен на более глубокое применение JavaScript для написания своих функций в мире табличных данных))).</p>
+            <button class="collapsible">Hobbies</button>
+                <div class="content">
+                    <p>книги | фильмы | шахматы</p>
+                </div>
+        </div>
+        <div class="pasport grid-item">
+            <div class="logo-my">
+
             </div>
-            <div class="content-text">
-                Python — это язык программирования, который предоставляет множество встроенных функций и методов для работы со списками. Функции и методы списков позволяют выполнять различные операции с элементами списка, изменять его, сортировать, фильтровать и многое другое.
+            <p style="margin: auto;">Имя: Сысоев Виталий Сергевич</p>
+            <p style="margin: auto;">Дата рождения: 09 Июля 1986 года</p>
+            <p style="margin: auto;">Страна проживания: Российская Федерация</p>
+        </div>
+    </div>
+
+    <div class="grid-wrapper container skill-my">
+        <div class="skills-my grid-item">
+            <h2>My Skills</h2>
+
+            <p>HTML</p>
+            <div class="container-skill">
+                <div class="skills html">60%</div>
+            </div>
+
+            <p>CSS</p>
+            <div class="container-skill">
+                <div class="skills css">40%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="container-skill">
+                <div class="skills js">65%</div>
+            </div>
+
+            <p>Python</p>
+            <div class="container-skill">
+                <div class="skills python">80%</div>
+            </div>
+
+            <p>jQuery</p>
+            <div class="container-skill">
+                <div class="skills jquery">5%</div>
+            </div>
+        </div>
+
+        <div class="history-my grid-item">
+            <div class="timeline">
+                <div class="containerline">
+                    <div class="history-content">
+                        <h2>2003</h2>
+                        <p>Оканчиваю школу</p>
+                    </div>
+                </div>
+                <div class="containerline">
+                    <div class="history-content">
+                        <h2>2006</h2>
+                        <p>Закончил колледж РАТК ГА по специальности системный администратор</p>
+                    </div>
+                </div>
+                <div class="containerline">
+                    <div class="history-content">
+                        <h2>2010</h2>
+                        <p>Завершил учебу в уничерситете БГТУ по специальности программист</p>
+                    </div>
+                </div>
+                <div class="containerline">
+                    <div class="history-content">
+                        <h2>2010 - 2023</h2>
+                        <p>Работаю системным администратором в разных конторах</p>
+                    </div>
+                </div>
+                <div class="containerline">
+                    <div class="history-content">
+                        <h2>c 2023</h2>
+                        <p>Ухожу в поддержку вторая линия в компанию по разработке ПО для банков. И далее планирую начать становление себя в программировании </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
 </head>
 <body>
-<p> Title 
-Don Vito Syso
-  Full stack developer. </p>
-
-<p> Основной контент...
-Обо мне.
-Я начинающий "старый" разработчик-программист. Моя страсть это писать скрипты для Excel. Ищу свое место в мире Web-разработчиков. Больше по душе работа с БД, т.е. backend разработка. Но так же нацелен на более глубокое применение JavaScript для написания своих функций в мире табличных данных))).</p>
-
-<p> Мое хобби
-  книги фильмы шахматы </p>
-
-<p> Справа ДИВ 
-Фото
-ФИО
-Пол
-Дата рождения
-  Национальсность страна проживания </p>
-
-  <p> Контакты для связи (телефон, телеграмм, почта) </p>
   
-<p> Слева ниже ДИВ
-Скилы
-HTML
-CSS
-Python
-JavaScript
-  jQuery </p>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
 
-<p> Справа ниже ДИВ
-timeline
-С 2003-2006 обучение на сисадмина в РАТКГА 
-С 2006-2010 обучение программированию в БГТУ
-С 2011 по 2023 начал работать по специальности сисадмин.
-С 2023 ухожу в поддержку вторая линия в компанию по разработке ПО для банков. И далее планирую начать становление себя в программировании </p>
+<footer style="background-color: gray;">
+    <nav>
+        <ul>
+            <a href="#"><li>Main | </li></a>
+            <a href="#"><li>About my | </li></a>
+            <a href="#"><li>Contacts | </li></a>
+        </ul>
+    </nav>
+</footer>
 </body>
 </html>
