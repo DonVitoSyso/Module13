@@ -1,0 +1,137 @@
+1. Пакетные менеджеры npm и yarn
+    https://nodejs.org/en/download/
+
+    инициализируйте проект с помощью следующей команды:
+    npm init -y
+    Параметр -y означает, что все вопросы, которые обычно задаются при создании 
+    файла package.json, будут пропущены
+
+
+2. Добавление/Удаление нового пакета
+    npm install <название_пакета>
+        установить пакет глобально: npm install -g <название_пакета> (npm install <название_пакета>@<номер_версии>)
+    npm uninstall <название_пакета>
+
+3. Webpack нам необходимо установить два пакета (webpack и webpack-cli):
+    npm install webpack webpack-cli --save-dev
+
+4. В Parcel встроен сервер разработки, который поддерживает горячую замену модулей и автоматически пересобирает приложение:
+    npm install parcel-bundler --dev
+
+5. Подключаем CSS к Webpack:
+    npm i style-loader css-loader --save-dev
+
+    module.exports = {
+        output: {
+            filename: 'my-first-webpack.bundle.js'
+        },
+        module: {
+            rules: [
+            { test: /\.css$/,
+            use: ['style-loader', 'css-loader'] }
+            ]
+        }
+    };
+
+6. CSS inline:
+    npm install  mini-css-extract-plugin  --save-dev
+
+    a)const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+    b)use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            },
+          },
+          'css-loader',
+     ],
+
+     c)plugins: [new MiniCssExtractPlugin()]
+
+7. Шаблонизаторы для работы с Pug:
+    npm install pug pug-loader --save-dev
+
+    module.exports = {
+        entry: '/index.js',
+        output: {
+            filename: 'main.js'
+        },
+        plugins: [
+            new  ({template: '/index.pug'})
+        ],
+        module: {
+            rules: [
+                    {
+                    test: /\.pug$/,
+                    loader: 'pug-loader',
+                    options: {
+                    pretty: true
+                    }
+                }
+            ]
+        }
+    };
+
+8. подключить TypeScript:
+    npm install --save-dev typescript ts-loader
+
+    webpack.config.js
+    entry: './src/index.ts'
+
+    подключаем загрузчик ts-loader.
+
+    {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+
+9. Linter — программа, которая проверяет исходный код на соответствие стандартам, опираясь на определенный набор правил.
+    npm install eslint --save-dev
+    npx eslint --init (файл конфигурации)
+    npx eslint yourfile.js (запустить линтер для любого файла)
+
+10. CSS lint:
+    Npm i stylelint stylelint-webpack-plugin --save-dev
+
+11. Webpack-dev-server предоставляет нам простой веб-сервер:
+    npm install --save-dev webpack-dev-server
+
+    webpack.config.js:
+        module.exports = {
+            mode: 'development',
+            entry: './src/index.js',
+        devServer: {
+            static: './dist',
+        },
+            plugins: [
+                new HtmlWebpackPlugin({
+                title: 'Development',
+            }),
+            ],
+            output: {
+            filename: 'main.js',
+            },
+        };
+
+    запустить его с помощью команды npx webpack-dev-server
+
+12. JSON-server доступен в виде пакета npm
+    npm install -g json-server
+    npm install --save-dev json-server
+
+13. Husky — это простая утилита на JavaScript, сильно упрощающая работу с хуками
+
+    npm set-script prepare "husky install" && npm run prepare
+    Добавляем хук:
+    npx husky add .husky/pre-commit "npm test"    
+
+
+    Теперь перед каждым коммитом у вас будут выполняться тесты (если они есть и настроены), и только в случае удачного выполнения тестов коммит будет выполнен
+
+
+
+
+
